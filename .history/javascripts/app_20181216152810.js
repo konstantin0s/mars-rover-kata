@@ -51,16 +51,16 @@ function moveRover(directions) {
   for (var i = 0; i < directions.length; i++) {
    var addDirection = directions[i];
    switch(addDirection) {
-    case "F":
+    case "forward":
      moveForward(rover);
     break;
-    case "R":
+    case "right":
     turnRight(rover);
     break;
-    case "B":
+    case "backwards":
      moveBackwords(rover);
     break;
-    case "L":
+    case "left":
     turnLeft(rover);
     break;
     default: 

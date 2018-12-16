@@ -48,26 +48,23 @@ function moveForward(rover){
 
  //Iteration 2 - turning the rover with a switch statement
 function moveRover(directions) {
-  for (var i = 0; i < directions.length; i++) {
-   var addDirection = directions[i];
-   switch(addDirection) {
-    case "F":
-     moveForward(rover);
+   switch(directions) {
+    case "N":
+     moveForward();
     break;
-    case "R":
-    turnRight(rover);
+    case "E":
+    turnRight();
     break;
-    case "B":
-     moveBackwords(rover);
+    case "S":
+     moveForward();
     break;
-    case "L":
-    turnLeft(rover);
+    case "W":
+    turnLeft();
     break;
     default: 
-    console.log("Add a direction");
+    // console.log("Add a direction");
     break;
   }
-}
   // console.log("The direction of the rover is: ");
   // return;
 }
