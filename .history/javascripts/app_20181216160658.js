@@ -22,40 +22,25 @@ var grid = [
 
 // console.log(directions);
 // ======================
-function turnLeft(rover) {
+function turnLeft(rover){
   switch(rover.direction) {
     case "N":
-        rover.direction = "W";
+        
     break;
     case "E":
-    rover.direction = "N";
+
     break;
     case "S":
-    rover.direction = "E";
+
     break;
     case "W":
-    rover.direction = "S";
+
     break;
   }
-  console.log("The current position of the rover is: " + rover.direction);
 }
 
 function turnRight(rover){
-  switch(rover.direction) {
-    case "N":
-        rover.direction = "E";
-    break;
-    case "E":
-    rover.direction = "S";
-    break;
-    case "S":
-    rover.direction = "W";
-    break;
-    case "W":
-    rover.direction = "N";
-    break;
-  }
-  console.log("The current position of the rover is: " + rover.direction);
+  console.log("Rover turned right");
 }
 
 function moveBackwords(rover){
