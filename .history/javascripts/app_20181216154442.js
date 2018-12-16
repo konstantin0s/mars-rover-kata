@@ -17,7 +17,7 @@ function turnRight(rover){
   console.log("turnRight was called!");
 }
 
-//====Iteration 3 ====
+//=====Iteration 2=====
 function moveForward(rover){
   switch(rover.direction) {
     case "N":
@@ -31,14 +31,10 @@ function moveForward(rover){
      rover.trackRover.push(rover.x, rover.y);
     break;
     case "S":
-    rover.y += 1;
-    console.log("Current position of the rover is " + "X: " + rover.x + " Y: " + rover.y);
-    rover.trackRover.push(rover.x, rover.y);
+        
     break;
     case "W":
-    rover.x -= 1;
-    console.log("Current position of the rover is " + "X: " + rover.x + " Y: " + rover.y);
-    rover.trackRover.push(rover.x, rover.y);
+  
     break;
     default: 
     // console.log("Add a direction");

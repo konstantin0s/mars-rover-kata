@@ -17,7 +17,7 @@ function turnRight(rover){
   console.log("turnRight was called!");
 }
 
-//====Iteration 3 ====
+//=====Iteration 2=====
 function moveForward(rover){
   switch(rover.direction) {
     case "N":
