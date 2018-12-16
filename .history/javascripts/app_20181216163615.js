@@ -1,7 +1,7 @@
 // Rover Object Goes Here
 // ======================
 var rover = {
-  direction: "N",
+  direction: "E",
   x: 0,
   y: 0,
   travelLog: [0,0]

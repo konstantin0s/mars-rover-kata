@@ -1,7 +1,7 @@
 // Rover Object Goes Here
 // ======================
 var rover = {
-  direction: "N",
+  direction: "E",
   x: 0,
   y: 0,
   travelLog: [0,0]
@@ -22,91 +22,47 @@ var grid = [
 
 // console.log(directions);
 // ======================
+function turnLeft(rover) {
+  switch(rover.direction) {
+    case "N":
+        rover.direction = "W";
+    break;
+    case "E":
+    rover.direction = "N";
+    break;
+    case "S":
+    rover.direction = "E";
+    break;
+    case "W":
+    rover.direction = "S";
+    break;
+    default: 
+    console.log("Add a direction");
+    break;
+  }
+  console.log("The current position of the rover is: " + rover.direction);
+}
 
 function turnRight(rover){
   switch(rover.direction) {
-    // case "N":
-    //     rover.direction = "E";
-    // break;
     case "N":
-    rover.x += 1;
-    console.log("Current position of the rover is " + "X: " + rover.x + " Y: " + rover.y);
-    rover.travelLog.push(rover.x, rover.y);
-   break;
-
-    // case "E":
-    // rover.direction = "S";
-    // break;
+        rover.direction = "E";
+    break;
     case "E":
-    rover.y += 1;
-    console.log("Current position of the rover is " + "X: " + rover.x + " Y: " + rover.y);
-    rover.travelLog.push(rover.x, rover.y);
-   break;
-    // case "S":
-    // rover.direction = "W";
-    // break;
+    rover.direction = "S";
+    break;
     case "S":
-    rover.x -= 1;
-    console.log("Current position of the rover is " + "X: " + rover.x + " Y: " + rover.y);
-    rover.travelLog.push(rover.x, rover.y);
-   break;
-    // case "W":
-    // rover.direction = "N";
-    // break;
+    rover.direction = "W";
+    break;
     case "W":
-    rover.y -= 1;
-    console.log("Current position of the rover is " + "X: " + rover.x + " Y: " + rover.y);
-    rover.travelLog.push(rover.x, rover.y);
-   break;
+    rover.direction = "N";
+    break;
     default: 
     console.log("Add a direction");
     break;
   }
   console.log("The current position of the rover is: " + rover.direction);
 }
-
-
-function turnLeft(rover) {
-  switch(rover.direction) {
-    // case "N":
-    //     rover.direction = "W";
-    // break;
-    case "N":
-    rover.x -= 1;
-    console.log("Current position of the rover is " + "X: " + rover.x + " Y: " + rover.y);
-    rover.travelLog.push(rover.x, rover.y);
-   break;
-    // case "E":
-    // rover.direction = "N";
-    // break;
-    case "E":
-    rover.y -= 1;
-    console.log("Current position of the rover is " + "X: " + rover.x + " Y: " + rover.y);
-    rover.travelLog.push(rover.x, rover.y);
-   break;
-    // case "S":
-    // rover.direction = "E";
-    // break;
-    case "S":
-    rover.x += 1;
-    console.log("Current position of the rover is " + "X: " + rover.x + " Y: " + rover.y);
-    rover.travelLog.push(rover.x, rover.y);
-   break;
-    // case "W":
-    // rover.direction = "S";
-    // break;
-    case "W":
-    rover.y += 1;
-    console.log("Current position of the rover is " + "X: " + rover.x + " Y: " + rover.y);
-    rover.travelLog.push(rover.x, rover.y);
-   break;
-    default: 
-    console.log("Add a direction");
-    break;
-  }
-  console.log("The current position of the rover is: " + rover.direction);
-}
-
 
 function moveBackwords(rover){
   switch(rover.direction) {
