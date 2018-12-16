@@ -6,20 +6,6 @@ var rover = {
   y: 0,
   travelLog: [0,0]
 }
-
-var grid = [
-  [null, null, null, null, null,null, null, null, null, null],
-  [null, null, null, null, null,null, null, null, null, null],
-  [null, null, null, null, null,null, null, null, null, null],
-  [null, null, null, null, null,null, null, null, null, null],
-  [null, null, null, null, null,null, null, null, null, null],
-  [null, null, null, null, null,null, null, null, null, null],
-  [null, null, null, null, null,null, null, null, null, null],
-  [null, null, null, null, null,null, null, null, null, null],
-  [null, null, null, null, null,null, null, null, null, null],
-  [null, null, null, null, null,null, null, null, null, null],
-];
-
 // console.log(directions);
 // ======================
 function turnLeft(rover){

@@ -4,22 +4,8 @@ var rover = {
   direction: "N",
   x: 0,
   y: 0,
-  travelLog: [0,0]
+  trackRover: [0,0]
 }
-
-var grid = [
-  [null, null, null, null, null,null, null, null, null, null],
-  [null, null, null, null, null,null, null, null, null, null],
-  [null, null, null, null, null,null, null, null, null, null],
-  [null, null, null, null, null,null, null, null, null, null],
-  [null, null, null, null, null,null, null, null, null, null],
-  [null, null, null, null, null,null, null, null, null, null],
-  [null, null, null, null, null,null, null, null, null, null],
-  [null, null, null, null, null,null, null, null, null, null],
-  [null, null, null, null, null,null, null, null, null, null],
-  [null, null, null, null, null,null, null, null, null, null],
-];
-
 // console.log(directions);
 // ======================
 function turnLeft(rover){
@@ -41,22 +27,22 @@ function moveForward(rover){
     case "N":
      rover.y -= 1;
      console.log("Current position of the rover is " + "X: " + rover.x + " Y: " + rover.y);
-     rover.travelLog.push(rover.x, rover.y);
+     rover.trackRover.push(rover.x, rover.y);
     break;
     case "E":
      rover.x += 1;
      console.log("Current position of the rover is " + "X: " + rover.x + " Y: " + rover.y);
-     rover.travelLog.push(rover.x, rover.y);
+     rover.trackRover.push(rover.x, rover.y);
     break;
     case "S":
     rover.y += 1;
     console.log("Current position of the rover is " + "X: " + rover.x + " Y: " + rover.y);
-    rover.travelLog.push(rover.x, rover.y);
+    rover.trackRover.push(rover.x, rover.y);
     break;
     case "W":
     rover.x -= 1;
     console.log("Current position of the rover is " + "X: " + rover.x + " Y: " + rover.y);
-    rover.travelLog.push(rover.x, rover.y);
+    rover.trackRover.push(rover.x, rover.y);
     break;
     default: 
     console.log("Add a direction");
@@ -70,7 +56,7 @@ function moveForward(rover){
 
 
 
- //=== Iteration 4 ===
+ //Iteration 2 - turning the rover with a switch statement
 function moveRover(directions) {
   for (var i = 0; i < directions.length; i++) {
    var addDirection = directions[i];
@@ -97,7 +83,7 @@ function moveRover(directions) {
 }
 
 
-
+//Iteration 3 - Moving the rover
 
 
 
