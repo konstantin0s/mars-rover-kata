@@ -67,22 +67,22 @@ function turnRight(rover){
 function moveBackwords(rover){
   switch(rover.direction) {
     case "N":
-     rover.y += 1;
+     rover.y -= 1;
      console.log("Current position of the rover is " + "X: " + rover.x + " Y: " + rover.y);
      rover.travelLog.push(rover.x, rover.y);
     break;
     case "E":
-     rover.x -= 1;
+     rover.x += 1;
      console.log("Current position of the rover is " + "X: " + rover.x + " Y: " + rover.y);
      rover.travelLog.push(rover.x, rover.y);
     break;
     case "S":
-    rover.y -= 1;
+    rover.y += 1;
     console.log("Current position of the rover is " + "X: " + rover.x + " Y: " + rover.y);
     rover.travelLog.push(rover.x, rover.y);
     break;
     case "W":
-    rover.x += 1;
+    rover.x -= 1;
     console.log("Current position of the rover is " + "X: " + rover.x + " Y: " + rover.y);
     rover.travelLog.push(rover.x, rover.y);
     break;
