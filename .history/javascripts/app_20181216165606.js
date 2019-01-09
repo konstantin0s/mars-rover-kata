@@ -9,15 +9,15 @@ var rover = {
 
 var grid = [
   [rover, null, null, null, null,null, null, null, null, null],
+  [null, O, null, null, null,null, null, null, null, null],
   [null, null, null, null, null,null, null, null, null, null],
   [null, null, null, null, null,null, null, null, null, null],
   [null, null, null, null, null,null, null, null, null, null],
   [null, null, null, null, null,null, null, null, null, null],
+  [null, null, null, O, null,null, null, null, null, null],
   [null, null, null, null, null,null, null, null, null, null],
   [null, null, null, null, null,null, null, null, null, null],
-  [null, null, null, null, null,null, null, null, null, null],
-  [null, null, null, null, null,null, null, null, null, null],
-  [null, null, null, null, null,null, null, null, null, null]
+  [null, null, null, null, null,null, null, null, O, null]
 ];
 
 
@@ -27,39 +27,39 @@ var grid = [
 
 function turnRight(rover){
   switch(rover.direction) {
+    // case "N":
+    //     rover.direction = "E";
+    // break;
     case "N":
-    rover.direction = "E";
-    break;
-  //   case "N":
-  //   rover.x += 1;
-  //   console.log("Current position of the rover is " + "X: " + rover.x + " Y: " + rover.y);
-  //   rover.travelLog.push(rover.x, rover.y);
-  //  break;
+    rover.x += 1;
+    console.log("Current position of the rover is " + "X: " + rover.x + " Y: " + rover.y);
+    rover.travelLog.push(rover.x, rover.y);
+   break;
 
+    // case "E":
+    // rover.direction = "S";
+    // break;
     case "E":
-    rover.direction = "S";
-    break;
-  //   case "E":
-  //   rover.y += 1;
-  //   console.log("Current position of the rover is " + "X: " + rover.x + " Y: " + rover.y);
-  //   rover.travelLog.push(rover.x, rover.y);
-  //  break;
+    rover.y += 1;
+    console.log("Current position of the rover is " + "X: " + rover.x + " Y: " + rover.y);
+    rover.travelLog.push(rover.x, rover.y);
+   break;
+    // case "S":
+    // rover.direction = "W";
+    // break;
     case "S":
-    rover.direction = "W";
-    break;
-  //   case "S":
-  //   rover.x -= 1;
-  //   console.log("Current position of the rover is " + "X: " + rover.x + " Y: " + rover.y);
-  //   rover.travelLog.push(rover.x, rover.y);
-  //  break;
+    rover.x -= 1;
+    console.log("Current position of the rover is " + "X: " + rover.x + " Y: " + rover.y);
+    rover.travelLog.push(rover.x, rover.y);
+   break;
+    // case "W":
+    // rover.direction = "N";
+    // break;
     case "W":
-    rover.direction = "N";
-    break;
-  //   case "W":
-  //   rover.y -= 1;
-  //   console.log("Current position of the rover is " + "X: " + rover.x + " Y: " + rover.y);
-  //   rover.travelLog.push(rover.x, rover.y);
-  //  break;
+    rover.y -= 1;
+    console.log("Current position of the rover is " + "X: " + rover.x + " Y: " + rover.y);
+    rover.travelLog.push(rover.x, rover.y);
+   break;
     default: 
     console.log("Add a direction");
     break;
@@ -70,38 +70,38 @@ function turnRight(rover){
 
 function turnLeft(rover) {
   switch(rover.direction) {
+    // case "N":
+    //     rover.direction = "W";
+    // break;
     case "N":
-    rover.direction = "W";
-    break;
-  //   case "N":
-  //   rover.x -= 1;
-  //   console.log("Current position of the rover is " + "X: " + rover.x + " Y: " + rover.y);
-  //   rover.travelLog.push(rover.x, rover.y);
-  //  break;
+    rover.x -= 1;
+    console.log("Current position of the rover is " + "X: " + rover.x + " Y: " + rover.y);
+    rover.travelLog.push(rover.x, rover.y);
+   break;
+    // case "E":
+    // rover.direction = "N";
+    // break;
     case "E":
-    rover.direction = "N";
-    break;
-  //   case "E":
-  //   rover.y -= 1;
-  //   console.log("Current position of the rover is " + "X: " + rover.x + " Y: " + rover.y);
-  //   rover.travelLog.push(rover.x, rover.y);
-  //  break;
+    rover.y -= 1;
+    console.log("Current position of the rover is " + "X: " + rover.x + " Y: " + rover.y);
+    rover.travelLog.push(rover.x, rover.y);
+   break;
+    // case "S":
+    // rover.direction = "E";
+    // break;
     case "S":
-    rover.direction = "E";
-    break;
-  //   case "S":
-  //   rover.x += 1;
-  //   console.log("Current position of the rover is " + "X: " + rover.x + " Y: " + rover.y);
-  //   rover.travelLog.push(rover.x, rover.y);
-  //  break;
+    rover.x += 1;
+    console.log("Current position of the rover is " + "X: " + rover.x + " Y: " + rover.y);
+    rover.travelLog.push(rover.x, rover.y);
+   break;
+    // case "W":
+    // rover.direction = "S";
+    // break;
     case "W":
-    rover.direction = "S";
-    break;
-  //   case "W":
-  //   rover.y += 1;
-  //   console.log("Current position of the rover is " + "X: " + rover.x + " Y: " + rover.y);
-  //   rover.travelLog.push(rover.x, rover.y);
-  //  break;
+    rover.y += 1;
+    console.log("Current position of the rover is " + "X: " + rover.x + " Y: " + rover.y);
+    rover.travelLog.push(rover.x, rover.y);
+   break;
     default: 
     console.log("Add a direction");
     break;
@@ -177,6 +177,9 @@ function moveForward(rover){
 
  //=== Iteration 4 ===
 function moveRover(directions) {
+  if (directions !== "F" || directions !== "B" || directions !== "L" || directions !== "R") {
+     
+  } else {
   for (var i = 0; i < directions.length; i++) {
    var addDirection = directions[i];
    switch(addDirection) {
@@ -198,8 +201,9 @@ function moveRover(directions) {
    }
   }
 }
-
-
+  // console.log("The direction of the rover is: ");
+  // return;
+}
 //moveRover("FFBLR");
 
 
